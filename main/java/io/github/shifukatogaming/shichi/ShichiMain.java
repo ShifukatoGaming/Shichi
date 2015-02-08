@@ -1,5 +1,6 @@
 package io.github.shifukatogaming.shichi;
 
+import io.github.shifukatogaming.shichi.item.ModItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -24,7 +25,7 @@ public class ShichiMain
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-		
+		ModItems.init();
 	}
 	
 	@EventHandler
