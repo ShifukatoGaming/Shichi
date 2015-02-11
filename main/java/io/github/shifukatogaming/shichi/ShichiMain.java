@@ -1,6 +1,9 @@
 package io.github.shifukatogaming.shichi;
 
+import java.sql.SQLException;
+
 import io.github.shifukatogaming.shichi.item.ModItems;
+import io.github.shifukatogaming.shichi.mysql.MysqlConnection;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -23,9 +26,10 @@ public class ShichiMain
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) 
+	public void preInit(FMLPreInitializationEvent event) throws ClassNotFoundException, SQLException 
 	{
 		ModItems.init();
+		MysqlConnection.init();
 	}
 	
 	@EventHandler
